@@ -12,6 +12,8 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        val resultado = MainActivity.calculaImc(90.00, 1.90, "pt")
+        assertTrue("IMC calculado corretamente",
+            MainActivity.calculaImc(90.00, 1.90, "pt") in 24.93 .. 24.94)
     }
 }
